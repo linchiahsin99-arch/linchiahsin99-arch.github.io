@@ -1,0 +1,75 @@
+# ════════════════════════════════════════════
+#  Pages CMS 後台設定
+#  決定後台有哪些項目、每個項目要填哪些欄位
+# ════════════════════════════════════════════
+
+# 圖片上傳後存放的位置（就是原本的 images 資料夾）
+media:
+  input: images
+  output: /images
+
+content:
+  # ── 專欄文章 ──
+  - name: posts
+    label: 專欄文章
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{fields.slug}.md"
+    fields:
+      - name: title
+        label: 標題
+        type: string
+        required: true
+      - name: slug
+        label: 網址代稱
+        type: string
+        required: true
+        description: 只能用英文小寫、數字和連字號，例如 first-consultation。會成為文章網址的一部分，發布後請不要再修改。
+      - name: date
+        label: 發布日期
+        type: date
+        required: true
+      - name: description
+        label: 摘要
+        type: text
+        description: 顯示在文章列表和 Google 搜尋結果，建議 50 到 80 字。
+      - name: image
+        label: 封面圖片（選填）
+        type: image
+      - name: body
+        label: 內文
+        type: rich-text
+
+  # ── 成功案例 ──
+  - name: cases
+    label: 成功案例
+    type: collection
+    path: _cases
+    filename: "{year}-{month}-{day}-{fields.slug}.md"
+    fields:
+      - name: title
+        label: 標題
+        type: string
+        required: true
+        description: 例如「成功爭取不起訴」
+      - name: slug
+        label: 檔名代號
+        type: string
+        required: true
+        description: 只能用英文小寫、數字和連字號，例如 non-prosecution。只用來命名檔案，訪客看不到。
+      - name: tag
+        label: 案件類型
+        type: select
+        required: true
+        options:
+          values: [家事案件, 刑事辯護, 民事訴訟, 法律顧問, 車禍損害賠償, 勞資爭議]
+      - name: image
+        label: 案例圖片
+        type: image
+        required: true
+        description: 判決書或處分書截圖請先遮蔽姓名、案號等個資。
+      - name: date
+        label: 刊登日期
+        type: date
+        required: true
+        description: 決定排列順序，日期越新排越前面。
