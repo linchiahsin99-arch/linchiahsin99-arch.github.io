@@ -1,0 +1,22 @@
+# ════════════════════════════════════════════
+#  網站基本設定（Jekyll 會先讀這個檔案）
+#  改了這個檔案之後，網站要重新部署才會生效
+# ════════════════════════════════════════════
+
+title: 林嘉信律師
+tagline: 民事・刑事・家事訴訟
+description: 林嘉信律師，專注一般民事、刑事與家事訴訟。用聽得懂的話，陪您把事情一步步處理好。
+lang: zh-Hant-TW
+timezone: Asia/Taipei
+
+# 專欄文章的網址格式，例如 /articles/2026/11/first-consultation/
+permalink: /articles/:year/:month/:title/
+
+# 成功案例：只當作資料使用，不會產生獨立頁面
+collections:
+  cases:
+    output: false
+
+# 不要放到網站上的檔案
+exclude:
+  - README.md

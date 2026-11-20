@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<!-- 單篇文章的版面：每篇文章都會自動套用 -->
+<article class="article">
+  <header class="article-head">
+    <span class="post-date">{{ page.date | date: "%Y.%m.%d" }}</span>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  {% if page.image %}
+  <img class="article-cover" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  {% endif %}
+
+  <!-- 文章內文（在後台寫的內容會放在這裡） -->
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <p class="article-note">本文僅為一般性法律資訊分享，不構成法律意見；個案情形不同，請洽詢律師。</p>
+
+  <div class="article-cta">
+    <h3>遇到類似的問題嗎？</h3>
+    <p>每個案件的狀況都不一樣，歡迎直接和我聊聊。</p>
+    <a href="{{ '/' | relative_url }}#contact" class="btn">預約諮詢</a>
+  </div>
+
+  <a class="back-link" href="{{ '/articles/' | relative_url }}">← 回到文章列表</a>
+</article>

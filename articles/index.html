@@ -1,0 +1,27 @@
+---
+layout: default
+title: 專欄文章
+description: 林嘉信律師的法律專欄，用白話說明常見的民事、刑事與家事問題。
+---
+<!-- 文章列表頁：網址是 /articles/，會自動列出所有文章，最新的在前面 -->
+<div class="page-head">
+  <div class="container">
+    <span class="eyebrow">ARTICLES</span>
+    <h1>專欄文章</h1>
+    <p>用白話聊聊生活中常見的法律問題。</p>
+  </div>
+</div>
+
+<section class="page-section">
+  <div class="container">
+    {% if site.posts.size > 0 %}
+    <div class="post-list">
+      {% for post in site.posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty">文章準備中，敬請期待。</p>
+    {% endif %}
+  </div>
+</section>

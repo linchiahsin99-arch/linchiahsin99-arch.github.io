@@ -1,0 +1,25 @@
+<!-- 頁尾、LINE 浮動按鈕、手機選單程式：所有頁面共用 -->
+<footer>
+  <div class="container">
+    © {{ site.time | date: "%Y" }} 林嘉信律師　｜　週一至週五 09:30–18:00<br>
+    本網站內容僅供參考，不構成法律意見；個案情形請洽詢律師。
+  </div>
+</footer>
+
+<a href="https://line.me/ti/p/3rQP5W7hZl" class="line-float" target="_blank" rel="noopener">LINE 諮詢</a>
+
+<script>
+  // 找到導覽列和選單按鈕
+  const header = document.querySelector('header');
+  const toggle = document.querySelector('.menu-toggle');
+
+  // 點按鈕時，切換 menu-open 這個 class（有就拿掉，沒有就加上）
+  toggle.addEventListener('click', () => {
+    header.classList.toggle('menu-open');
+  });
+
+  // 點任一個選單項目後，自動收起選單
+  document.querySelectorAll('.nav ul a').forEach(link => {
+    link.addEventListener('click', () => header.classList.remove('menu-open'));
+  });
+</script>

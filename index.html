@@ -1,0 +1,186 @@
+---
+layout: default
+---
+<!--
+  ════════════════════════════════════════════
+  首頁內容
+  ・最上面兩條 --- 之間是 Jekyll 的設定，告訴它要套用 default 版面
+  ・用大括號包起來的部分是 Jekyll 的語法，會在網站建置時換成實際內容
+  ・成功案例和最新文章會自動從後台讀取，不用在這裡改
+  ════════════════════════════════════════════
+-->
+
+  <!-- 首頁大標 -->
+  <div class="hero">
+    <div class="container">
+      <p class="eyebrow">民事 ・ 刑事 ・ 家事案件</p>
+      <h1>遇到法律問題，<br>先別一個人煩惱。</h1>
+      <p>我會用您聽得懂的話，把案件的狀況、可能的選擇和大概的時間費用說清楚，陪您一步步把事情處理好。</p>
+      <div class="actions">
+        <a href="#contact" class="btn">預約諮詢</a>
+        <a href="#services" class="btn btn-ghost">看看我能幫什麼</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 關於我 -->
+  <section id="about" class="alt">
+    <div class="container about">
+      <img class="photo" src="{{ '/images/photo.jpg' | relative_url }}" alt="林嘉信律師">
+      <div>
+        <h3>您好，我是林嘉信律師</h3>
+        <p>執業以來，我遇過很多第一次走進法院、心裡很不安的當事人。我相信，好的律師不只要懂法律，更要讓人放心開口、真正聽懂自己的處境。</p>
+        <p>所以每一次諮詢，我都會先把您的狀況聽完整，再用白話說明法律上怎麼看、有哪些路可以走，讓您自己做出最適合的決定。</p>
+        <ul class="creds">
+          <li>現任　守諺法律事務所　　　合署律師</li>
+          <li>曾任　鴻儒國際法律事務所　受僱律師</li>
+          <li>曾任　鴻儒國際法律事務所　實習律師</li>
+          <li>臺中律師公會會員　　　　　全國執業</li>
+          <li>國立臺灣大學法研所商法組　　　碩士</li>
+          <li>國立臺灣大學法律系司法組　　　學士</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服務項目 -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <span>SERVICES</span>
+        <h2>服務項目</h2>
+      </div>
+      <div class="services">
+        <div class="card">
+          <div class="num">01</div>
+          <h3>民事訴訟</h3>
+          <p>借款、買賣、租賃糾紛、損害賠償等案件的調解、起訴與答辯。</p>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <h3>刑事辯護</h3>
+          <p>偵查中陪同偵訊、審判辯護，以及告訴代理，協助您程序中的每一步。</p>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <h3>家事案件</h3>
+          <p>離婚、子女親權、扶養費、繼承與遺產分配，重視當事人與家人的感受。</p>
+        </div>
+        <div class="card">
+          <div class="num">04</div>
+          <h3>法律顧問</h3>
+          <p>勞資爭議、契約審閱，作為公司最佳夥伴。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 成功案例：自動讀取 _cases 資料夾，依刊登日期排列，最新的在前面 -->
+  <section id="cases" class="alt">
+    <div class="container">
+      <div class="section-title">
+        <span>CASES</span>
+        <h2>成功案例</h2>
+      </div>
+      <div class="cases">
+        {% assign cases = site.cases | sort: 'date' | reverse %}
+        {% for c in cases %}
+        <div class="case">
+          <a href="{{ c.image | relative_url }}" target="_blank">
+            <img src="{{ c.image | relative_url }}" alt="{{ c.title }}">
+          </a>
+          <div class="case-body">
+            <span class="tag">{{ c.tag }}</span>
+            <h3>{{ c.title }}</h3>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="cases-note">以上案例均已去識別化；個案結果因事實與證據不同而異，不代表其他案件的結果。</p>
+    </div>
+  </section>
+
+  <!-- 諮詢流程 -->
+  <section id="process">
+    <div class="container">
+      <div class="section-title">
+        <span>PROCESS</span>
+        <h2>諮詢流程</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>初步洽談及預約時間</h3><p>來電或來信，簡單說明您遇到的狀況。</p></div>
+        <div class="step"><h3>實體或線上諮詢</h3><p>帶著相關資料來事務所，或者線上會議諮詢，我會仔細聽完並說明法律上的看法。</p></div>
+        <div class="step"><h3>說明方案</h3><p>清楚列出可行的做法、所需時間與費用，由您決定。</p></div>
+        <div class="step"><h3>委任處理</h3><p>確定委任後，案件進度都會主動和您更新。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常見問題 -->
+  <section id="faq" class="alt">
+    <div class="container">
+      <div class="section-title">
+        <span>FAQ</span>
+        <h2>常見問題</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>第一次諮詢需要準備什麼？</summary>
+          <p>請帶著和案件有關的資料，例如契約、對話紀錄、收據、法院或檢察署寄來的文件。資料不齊也沒關係，先來談，我會告訴您還需要補什麼。</p>
+        </details>
+        <details>
+          <summary>諮詢怎麼收費？</summary>
+          <p>單次諮詢費用為新台幣 3000 元／小時。若後續委任，會在委任前清楚說明費用與計算方式。</p>
+        </details>
+        <details>
+          <summary>可以線上諮詢嗎？</summary>
+          <p>可以。若您不方便到事務所，我們可以約線上諮詢。</p>
+        </details>
+        <details>
+          <summary>我說的內容會保密嗎？</summary>
+          <p>會。律師對當事人負有保密義務，您在諮詢中提供的資訊都會妥善保密。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新文章：自動顯示最新 3 篇；還沒有文章時，整個區塊不會出現 -->
+  {% if site.posts.size > 0 %}
+  <section id="articles">
+    <div class="container">
+      <div class="section-title">
+        <span>ARTICLES</span>
+        <h2>專欄文章</h2>
+      </div>
+      <div class="post-list">
+        {% for post in site.posts limit: 3 %}
+          {% include post-card.html post=post %}
+        {% endfor %}
+      </div>
+      <div class="section-more">
+        <a href="{{ '/articles/' | relative_url }}" class="btn btn-ghost">看全部文章</a>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- 聯絡 -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>有任何疑問，歡迎先聊聊</h2>
+      <p>不確定需不需要找律師？打通電話問問也可以。</p>
+      <div class="contact-grid">
+        <div class="contact-item"><small>電話</small><strong>0975-301-339</strong></div>
+        <div class="contact-item"><small>EMAIL</small><strong>linchiahsin99@gmail.com</strong></div>
+        <div class="contact-item"><small>地址</small><strong>台中市東區大智路49號2樓</strong></div>
+      </div>
+      <div class="contact-actions">
+        <a href="tel:0975301339" class="btn">立即來電預約</a>
+        <a href="https://line.me/ti/p/3rQP5W7hZl" class="btn btn-line" target="_blank" rel="noopener">加 LINE 諮詢</a>
+      </div>
+      <div class="line-qr">
+        <img src="{{ '/images/line-qr.jpg' | relative_url }}" alt="LINE QR Code">
+        <p>用手機掃描，加入 LINE 好友</p>
+      </div>
+    </div>
+  </section>

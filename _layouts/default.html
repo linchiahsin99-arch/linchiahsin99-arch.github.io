@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════
+  共用版面：每一頁都會套用這個外框
+  下方 body 裡寫著 content 的位置，會放進各頁自己的內容
+  ════════════════════════════════════════════
+-->
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 有設定 title 的頁面（例如文章），分頁標題會是「文章標題｜林嘉信律師」 -->
+  <title>{% if page.title %}{{ page.title }}｜{{ site.title }}{% else %}{{ site.title }}｜{{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS 搬到獨立檔案，所有頁面共用同一份 -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  {% include header.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+</body>
+</html>
