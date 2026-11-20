@@ -29,16 +29,24 @@ layout: default
       <img class="photo" src="{{ '/images/photo.jpg' | relative_url }}" alt="林嘉信律師">
       <div>
         <h3>您好，我是林嘉信律師</h3>
-        <p>執業以來，我遇過很多第一次走進法院、心裡很不安的當事人。我相信，好的律師不只要懂法律，更要讓人放心開口、真正聽懂自己的處境。</p>
-        <p>所以每一次諮詢，我都會先把您的狀況聽完整，再用白話說明法律上怎麼看、有哪些路可以走，讓您自己做出最適合的決定。</p>
-        <ul class="creds">
-          <li>現任　守諺法律事務所　　　合署律師</li>
-          <li>曾任　鴻儒國際法律事務所　受僱律師</li>
-          <li>曾任　鴻儒國際法律事務所　實習律師</li>
-          <li>臺中律師公會會員　　　　　全國執業</li>
-          <li>國立臺灣大學法研所商法組　　　碩士</li>
-          <li>國立臺灣大學法律系司法組　　　學士</li>
-        </ul>
+        <p class="quote">「讓您煩惱到睡不著的事，就不是小事。」</p>
+        <p>很多人第一次來找我，開口的第一句話是「不好意思，這可能只是小事……」。其實會讓人放在心上、反覆想著該怎麼辦的事，對當事人來說從來都不小。</p>
+        <p>我之所以成為律師，是因為相信法律不該只是冷冰冰的條文，而是在人生最慌亂的時候，能讓人重新站穩的依靠。所以我習慣先把您的話聽完，再用白話說清楚法律怎麼看、有哪些路可以走、大概需要多少時間和費用，讓您安心做出自己的決定。</p>
+        <p>委任之後，我也會主動告訴您案件進度。過程中有任何疑問，隨時都可以問我。</p>
+
+        <!-- 學經歷：dt 是左欄類別，dd 是右欄內容；同一類別有兩行時，直接再加一個 dd -->
+        <dl class="creds">
+          <dt>現任</dt>
+          <dd>守諺法律事務所<span>合署律師</span></dd>
+          <dt>經歷</dt>
+          <dd>鴻儒國際法律事務所<span>受僱律師</span></dd>
+          <dd>鴻儒國際法律事務所<span>實習律師</span></dd>
+          <dt>公會</dt>
+          <dd>臺中律師公會<span>全國執業</span></dd>
+          <dt>學歷</dt>
+          <dd>國立臺灣大學法律學研究所<span>商法組 碩士</span></dd>
+          <dd>國立臺灣大學法律學系<span>司法組 學士</span></dd>
+        </dl>
       </div>
     </div>
   </section>
@@ -54,33 +62,63 @@ layout: default
         <div class="card">
           <div class="num">01</div>
           <h3>民事訴訟</h3>
-          <p>借款、買賣、租賃糾紛、損害賠償等案件的調解、起訴與答辯。</p>
+          <p>鄰居、房東、交易對象之間的糾紛，協助您調解、起訴與答辯。</p>
+          <ul>
+            <li>侵權行為與車禍損害賠償</li>
+            <li>契約糾紛與債務不履行</li>
+            <li>房屋漏水修繕爭議</li>
+            <li>分割共有物</li>
+            <li>拆屋還地與不動產登記</li>
+            <li>不當得利返還</li>
+          </ul>
         </div>
         <div class="card">
           <div class="num">02</div>
           <h3>刑事辯護</h3>
-          <p>偵查中陪同偵訊、審判辯護，以及告訴代理，協助您程序中的每一步。</p>
+          <p>偵查中陪同應訊、審判中辯護，以及告訴代理，協助您了解程序中的每一步。</p>
+          <ul>
+            <li>詐欺與洗錢防制案件</li>
+            <li>交通事故過失致死傷</li>
+            <li>竊盜</li>
+            <li>傷害</li>
+            <li>偽造有價證券</li>
+            <li>告訴代理與附帶民事求償</li>
+          </ul>
         </div>
         <div class="card">
           <div class="num">03</div>
           <h3>家事案件</h3>
-          <p>離婚、子女親權、扶養費、繼承與遺產分配，重視當事人與家人的感受。</p>
+          <p>重視當事人與家人的感受，在情與法之間找到平衡。</p>
+          <ul>
+            <li>減輕或免除扶養義務</li>
+            <li>給付扶養費</li>
+            <li>遺產分割</li>
+            <li>離婚相關爭議</li>
+            <li>子女親權與會面交往</li>
+            <li>夫妻財產制</li>
+          </ul>
         </div>
         <div class="card">
           <div class="num">04</div>
           <h3>法律顧問</h3>
-          <p>勞資爭議、契約審閱，作為公司最佳夥伴。</p>
+          <p>作為企業長期的法律夥伴，在問題發生之前先做好準備。</p>
+          <ul>
+            <li>契約擬定與審閱</li>
+            <li>勞資爭議處理</li>
+            <li>企業日常法律諮詢</li>
+            <li>存證信函與律師函</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 成功案例：自動讀取 _cases 資料夾，依刊登日期排列，最新的在前面 -->
+  <!-- 案例分享：自動讀取 _cases 資料夾，依刊登日期排列，最新的在前面 -->
   <section id="cases" class="alt">
     <div class="container">
       <div class="section-title">
         <span>CASES</span>
-        <h2>成功案例</h2>
+        <h2>案例分享</h2>
       </div>
       <div class="cases">
         {% assign cases = site.cases | sort: 'date' | reverse %}
@@ -116,8 +154,39 @@ layout: default
     </div>
   </section>
 
+  <!-- 收費說明 -->
+  <section id="fees" class="alt">
+    <div class="container">
+      <div class="section-title">
+        <span>FEES</span>
+        <h2>收費說明</h2>
+      </div>
+      <div class="fees">
+        <div class="fee">
+          <div class="label">Consultation</div>
+          <h3>法律諮詢</h3>
+          <div class="price">NT$ 3,000<small>／小時</small></div>
+          <p>可選擇到事務所面談或線上諮詢。先了解您的狀況，說明法律上的看法與可行的做法。</p>
+        </div>
+        <div class="fee">
+          <div class="label">Litigation</div>
+          <h3>訴訟委任</h3>
+          <div class="price">依審級計費</div>
+          <p>以每一個審級為單位計算，例如第一審、第二審分別報價，並依案件類型、複雜程度與所需時間調整。</p>
+        </div>
+        <div class="fee">
+          <div class="label">Transparency</div>
+          <h3>委任前先報價</h3>
+          <div class="price">費用透明</div>
+          <p>委任前會清楚說明費用與包含的服務內容。法院裁判費等規費另計，也會事先告知。</p>
+        </div>
+      </div>
+      <p class="fees-note">實際費用依個案情形而定，以委任前的報價為準。</p>
+    </div>
+  </section>
+
   <!-- 常見問題 -->
-  <section id="faq" class="alt">
+  <section id="faq">
     <div class="container">
       <div class="section-title">
         <span>FAQ</span>
@@ -146,7 +215,7 @@ layout: default
 
   <!-- 最新文章：自動顯示最新 3 篇；還沒有文章時，整個區塊不會出現 -->
   {% if site.posts.size > 0 %}
-  <section id="articles">
+  <section id="articles" class="alt">
     <div class="container">
       <div class="section-title">
         <span>ARTICLES</span>
@@ -182,5 +251,11 @@ layout: default
         <img src="{{ '/images/line-qr.jpg' | relative_url }}" alt="LINE QR Code">
         <p>用手機掃描，加入 LINE 好友</p>
       </div>
+
+      <!-- Google 地圖：q= 後面放地址，不需要申請金鑰 -->
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=台中市東區大智路49號&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="事務所位置地圖"></iframe>
+      </div>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=台中市東區大智路49號" target="_blank" rel="noopener">在 Google 地圖中開啟導航</a>
     </div>
   </section>

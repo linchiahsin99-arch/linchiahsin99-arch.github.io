@@ -1,13 +1,14 @@
 <!-- 導覽列：所有頁面共用 -->
 <header>
   <div class="container nav">
-    <a href="{{ '/' | relative_url }}" class="logo">{{ site.title | replace: '律師', ' 律師' }}<small>Lawyer</small></a>
+    <a href="{{ '/' | relative_url }}" class="logo">{{ site.title | replace: '律師', ' 律師' }}<small>Attorney at Law</small></a>
     <ul>
       <!-- 前面加上 / ，在文章頁點選單也能跳回首頁的對應區塊 -->
       <li><a href="{{ '/' | relative_url }}#about">關於我</a></li>
       <li><a href="{{ '/' | relative_url }}#services">服務項目</a></li>
-      <li><a href="{{ '/' | relative_url }}#cases">成功案例</a></li>
+      <li><a href="{{ '/' | relative_url }}#cases">案例分享</a></li>
       <li><a href="{{ '/' | relative_url }}#process">諮詢流程</a></li>
+      <li><a href="{{ '/' | relative_url }}#fees">收費說明</a></li>
       <li><a href="{{ '/' | relative_url }}#faq">常見問題</a></li>
       <li><a href="{{ '/articles/' | relative_url }}">專欄文章</a></li>
       <li><a href="{{ '/' | relative_url }}#contact">聯絡我</a></li>
